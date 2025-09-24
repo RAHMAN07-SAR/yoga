@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- SEO & Social -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yoga Studio Bengaluru | Yoku-inspired Yoga Classes</title>
+  <meta name="description" content="Yoga Studio Bengaluru — professional online & in-person yoga classes. Meditation, Pranayama, Anatomy, Yoga therapy. Contact +91 96766 59153." />
+  <meta name="keywords" content="yoga, yoga classes, Bengaluru, meditation, pranayama, yoga studio" />
+  <meta name="author" content="Yoga Studio - Redescreation" />
+ 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yoga Studio Bengaluru — Online & In-person Yoga" />
+  <meta property="og:description" content="Join Yoga Studio Bengaluru for expert-led yoga classes, therapy, and workshops. Contact +91 96766 59153." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1554311888-8e3c1c0bc9a0?auto=format&fit=crop&w=1600&q=60" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.redescreation.in" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Favicon (simple) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='60'>🪷</text></svg>">
+
+  <!-- Tailwind Play CDN (for prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (colors + fonts)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2f6a63',    // deep teal like reference
+            accent: '#ef6b63',     // coral
+            lightbg: '#e8f3f2'
+          },
+          fontFamily: {
+            sans: ['"Poppins"', 'system-ui', 'sans-serif'],
+            heading: ['"Montserrat"', 'sans-serif']
+          },
+          maxWidth: {
+            '6x1': '78rem' // custom requested max width similar to max-w-6xl but slightly wider - adapt if needed
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Basic styles for body & fine tuning -->
+  <style>
+    /* Simple font-loading fallback */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;600&display=swap');
+
+    html, body {
+      height: 100%;
+    }
+    .glass-soft {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(6px);
+    }
+    /* Make hero image nicely cover on large screens */
+    .hero-blob {
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+    }
+    /* subtle focus outline for keyboard users */
+    :focus {
+      outline: 3px solid rgba(47,106,99,0.18);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-700 bg-white">
+
+  <!-- SKIP LINK -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
+
+  <!-- SITE WRAPPER -->
+  <div class="min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="w-full shadow-sm bg-white/90 sticky top-0 z-40">
+      <div class="mx-auto w-full max-w-6x1 px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- logo -->
+          <div class="flex items-center gap-3">
+            <a href="#" class="flex items-center gap-3" aria-label="Yoga Studio Home">
+              <!-- simple SVG logo -->
+              <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32 6s-10 8-10 18c0 10 10 18 10 18s10-8 10-18c0-10-10-18-10-18z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+                <path d="M12 44c6-8 20-10 20-10s14 2 20 10c-12 6-28 6-40 0z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+              </svg>
+              <span class="font-heading font-semibold text-xl text-primary">Yoku</span>
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <nav class="hidden md:flex md:items-center md:space-x-6" aria-label="Main navigation">
+            <a href="index.html" class="text-sm text-primary hover:text-accent font-medium">Home</a>
+            <a href="about.html" class="text-sm hover:text-primary">About Us</a>
+            <a href="classes.html" class="text-sm hover:text-primary">Classes</a>
+            <a href="instructors.html" class="text-sm hover:text-primary">Instructors</a>
+            <a href="blog.html" class="text-sm hover:text-primary">Blog</a>
+            <a href="contact.html" class="text-sm hover:text-primary">Contact</a>
+          </nav>
+
+          <!-- CTAs -->
+          <div class="flex items-center space-x-3">
+            <a href="classes.html" class="hidden md:inline-block px-5 py-3 bg-primary text-white rounded-full shadow hover:opacity-95 transition" aria-label="View Classes">View Classes</a>
+            <button id="accountBtn" class="hidden md:inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100" aria-label="Account">
+              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0zM6 21a6 6 0 0 1 12 0" /></svg>
+            </button>
+
+            <!-- Mobile hamburger -->
+            <button id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden p-2 rounded-md focus:ring-2 focus:ring-primary" aria-label="Open menu">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile slide-out menu -->
+      <div id="mobileMenu" class="md:hidden" aria-hidden="true">
+        <div class="bg-white border-t">
+          <div class="px-6 py-6">
+            <div class="flex items-center justify-between">
+              <a href="#" class="flex items-center gap-3">
+                <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M32 6s-10 8-10 18c0 10 10 18 10 18s10-8 10-18c0-10-10-18-10-18z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+                  <path d="M12 44c6-8 20-10 20-10s14 2 20 10c-12 6-28 6-40 0z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="font-heading font-semibold text-lg text-primary">Yoku</span>
+              </a>
+              <button id="mobileClose" aria-label="Close menu" class="p-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+
+            <div class="mt-6 space-y-4">
+              <a href="index.html" class="block text-lg font-medium">Home</a>
+              <a href="about.html" class="block text-lg">About Us</a>
+              <a href="classes.html" class="block text-lg">Classes</a>
+              <a href="instructors.html" class="block text-lg">Instructors</a>
+              <a href="blog.html" class="block text-lg">Blog</a>
+              <a href="contact.html" class="block text-lg">Contact</a>
+            </div>
+
+            <div class="mt-6 border-t pt-4 flex items-center gap-3">
+              <input aria-label="Search site" type="search" placeholder="Search..." class="flex-1 px-3 py-2 border rounded-md" />
+              <div class="flex gap-2">
+                <a href="#" class="p-2 rounded-md bg-slate-100"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2v6M6 22V6" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+                <a href="#" class="p-2 rounded-md bg-slate-100"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" stroke-width="1.5"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main" class="flex-1">
+
+      <!-- HERO -->
+      <section id="home" class="relative overflow-hidden hero-blob" aria-label="Hero section">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8 py-12 lg:py-20">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left text -->
+            <div class="lg:col-span-7">
+              <p class="text-lg text-primary font-medium animate-fade-in">Online</p>
+              <h1 class="mt-4 text-6xl font-heading font-extrabold text-gray-800 leading-tight tracking-tight">Yoga Classes</h1>
+              <p class="mt-6 text-lg text-gray-600 max-w-2xl">
+                Yoga Studio Bengaluru offers expertly guided online and in-person classes. Trusted by 100,000+ students. Experienced instructors, therapeutic practices and programs for all levels.
+              </p>
+
+              <div class="mt-8 flex gap-4 items-center">
+                <a href="classes.html" class="px-6 py-3 bg-accent text-white rounded-full shadow hover:opacity-95 transition">Browse Courses</a>
+                <a href="contact.html" class="text-sm text-primary hover:underline">Contact Us</a>
+              </div>
+
+              <!-- Feature bullets -->
+              <div class="mt-10 grid grid-cols-2 gap-4 max-w-md">
+                <div class="flex items-start gap-3">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><i class="fa-solid fa-person"></i></div>
+                  <div>
+                    <div class="font-medium">Meditation & Mindfulness</div>
+                    <div class="text-sm text-gray-500">Daily guided sessions & techniques.</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><i class="fa-solid fa-leaf"></i></div>
+                  <div>
+                    <div class="font-medium">Holistic Therapy</div>
+                    <div class="text-sm text-gray-500">Yoga therapy & personalised plans.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right - image -->
+            <div class="lg:col-span-5 hidden lg:block relative">
+              <!-- Main radial blob + teacher image -->
+              <div class="relative w-full h-96 rounded-xl overflow-visible">
+                <!-- circular coral background -->
+                <div aria-hidden="true" class="absolute -right-10 top-6 w-[650px] h-[650px] rounded-full bg-accent/95 transform -translate-y-6"></div>
+
+                <!-- teacher image (replace with your screenshot file or remote image) -->
+                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=60"
+                     alt="Yoga teacher performing pose"
+                     class="absolute right-12 top-14 w-[520px] drop-shadow-lg transform translate-z-0" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED SERVICES / OFFERINGS -->
+      <section id="classes" class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-5">
+              <h2 class="text-4xl font-heading font-bold text-primary">Popular Classes</h2>
+              <p class="mt-4 text-gray-600 max-w-xl">Explore our curated set of classes that are suitable for beginners to advanced practitioners. Each program is led by certified instructors.</p>
+            </div>
+
+            <div class="lg:col-span-7">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- card 1 -->
+                <article class="p-6 border rounded-lg hover:shadow-lg transition">
+                  <div class="flex items-start gap-4">
+                    <div class="rounded-lg bg-primary/10 p-3 text-primary inline-flex items-center justify-center">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 3v4M6 7h12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-lg">Vinyasa Flow</h3>
+                      <p class="text-sm text-gray-500 mt-1">Dynamic flow classes to build strength and mobility.</p>
+                      <a href="#pricing" class="mt-3 inline-block text-sm text-primary hover:underline">See packages →</a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card 2 -->
+                <article class="p-6 border rounded-lg hover:shadow-lg transition">
+                  <div class="flex items-start gap-4">
+                    <div class="rounded-lg bg-primary/10 p-3 text-primary inline-flex items-center justify-center"><i class="fa-solid fa-person"></i></div>
+                    <div>
+                      <h3 class="font-semibold text-lg">Hatha Yoga</h3>
+                      <p class="text-sm text-gray-500 mt-1">Find balance, alignment and breath control in a classic practice.</p>
+                      <a href="#pricing" class="mt-3 inline-block text-sm text-primary hover:underline">See packages →</a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card 3 -->
+                <article class="p-6 border rounded-lg hover:shadow-lg transition">
+                  <div class="flex items-start gap-4">
+                    <div class="rounded-lg bg-primary/10 p-3 text-primary inline-flex items-center justify-center"><i class="fa-solid fa-person"></i></div>
+                    <div>
+                      <h3 class="font-semibold text-lg">Pranayama</h3>
+                      <p class="text-sm text-gray-500 mt-1">Breathing techniques to improve focus & calm.</p>
+                      <a href="#pricing" class="mt-3 inline-block text-sm text-primary hover:underline">See packages →</a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card 4 -->
+                <article class="p-6 border rounded-lg hover:shadow-lg transition">
+                  <div class="flex items-start gap-4">
+                    <div class="rounded-lg bg-primary/10 p-3 text-primary inline-flex items-center justify-center"><i class="fa-solid fa-person"></i></div>
+                    <div>
+                      <h3 class="font-semibold text-lg">Yoga Therapy</h3>
+                      <p class="text-sm text-gray-500 mt-1">Therapeutic approach for injury recovery and wellbeing.</p>
+                      <a href="#pricing" class="mt-3 inline-block text-sm text-primary hover:underline">See packages →</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section id="about" class="py-16 bg-lightbg">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6">
+              <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=60" alt="Yoga group practice" class="rounded-xl shadow-lg w-full" />
+            </div>
+
+            <div class="lg:col-span-6">
+              <h2 class="text-4xl font-heading font-bold text-primary">About Yoga Studio Bengaluru</h2>
+              <p class="mt-4 text-gray-600">Located in the heart of Bengaluru, Yoga Studio blends traditional Hatha and modern therapeutic yoga. Our mission is to make yoga accessible to everyone. We believe in safety, alignment, and a compassionate approach to practice.</p>
+
+              <ul class="mt-6 space-y-3">
+                <li class="flex items-start gap-3">
+                  <div class="mt-1"><i class="fa-solid fa-check"></i></div>
+                  <div><strong>Certified Teachers</strong> — Experienced instructors with therapeutic training.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1"><i class="fa-solid fa-biohazard"></i></div>
+                  <div><strong>Holistic Programs</strong> — Meditation, pranayama, yoga therapy and workshops.</div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1"><i class="fa-solid fa-trophy"></i></div>
+                  <div><strong>Proven Results</strong> — Improved mobility, reduced stress, better sleep.</div>
+                </li>
+              </ul>
+
+              <div class="mt-6 flex items-center gap-4">
+                <a href="contact.html" class="px-4 py-2 bg-primary text-white rounded-md">Book a Call</a>
+                <a href="#team" class="text-primary hover:underline">Meet the team</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM / INSTRUCTORS -->
+      <section id="team" class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-4xl font-heading font-bold text-primary">Meet Our Instructors</h2>
+            <p class="mt-4 text-gray-600">Each teacher brings a unique background — from therapeutic yoga to classical Hatha, modern vinyasa and meditation.</p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- teacher card -->
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" alt="Instructor - Mira" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Mira Patel</div>
+                <div class="text-sm text-gray-500">Senior Instructor — Hatha & Therapy</div>
+              </figcaption>
+            </figure>
+
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=800&q=60" alt="Instructor - Arjun" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Arjun Rao</div>
+                <div class="text-sm text-gray-500">Vinyasa & Breathwork</div>
+              </figcaption>
+            </figure>
+
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=800&q=60" alt="Instructor - Sima" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Sima Roy</div>
+                <div class="text-sm text-gray-500">Pranayama Specialist</div>
+              </figcaption>
+            </figure>
+
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=60" alt="Instructor - Rohit" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Rohit Desai</div>
+                <div class="text-sm text-gray-500">Therapeutic Yoga</div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO / GALLERY with FILTER -->
+      <section id="portfolio" class="py-16 bg-lightbg">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-4xl font-heading font-bold text-primary">Gallery & Workshops</h2>
+              <p class="mt-2 text-gray-600">See moments from classes, workshops, and retreats.</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <label class="sr-only" for="filter">Filter gallery</label>
+              <div id="galleryFilters" class="flex gap-2">
+                <button data-filter="all" class="filter-btn px-4 py-2 rounded-full bg-primary text-white text-sm">All</button>
+                <button data-filter="class" class="filter-btn px-4 py-2 rounded-full bg-white text-primary border">Classes</button>
+                <button data-filter="workshop" class="filter-btn px-4 py-2 rounded-full bg-white text-primary border">Workshops</button>
+                <button data-filter="retreat" class="filter-btn px-4 py-2 rounded-full bg-white text-primary border">Retreats</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid" aria-live="polite">
+            <!-- items -->
+            <figure data-category="class" class="gallery-item rounded-lg overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=800&q=60" alt="class photo" class="w-full h-56 object-cover group-hover:scale-105 transition" />
+              <figcaption class="p-4 bg-white">
+                <div class="font-semibold">Morning Flow</div>
+                <div class="text-sm text-gray-500">Beginner friendly vinyasa.</div>
+              </figcaption>
+            </figure>
+
+            <figure data-category="workshop" class="gallery-item rounded-lg overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=60" alt="workshop" class="w-full h-56 object-cover group-hover:scale-105 transition" />
+              <figcaption class="p-4 bg-white">
+                <div class="font-semibold">Alignment Workshop</div>
+                <div class="text-sm text-gray-500">Foundations & alignment cues.</div>
+              </figcaption>
+            </figure>
+
+            <figure data-category="retreat" class="gallery-item rounded-lg overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=800&q=60" alt="retreat" class="w-full h-56 object-cover group-hover:scale-105 transition" />
+              <figcaption class="p-4 bg-white">
+                <div class="font-semibold">Weekend Retreat</div>
+                <div class="text-sm text-gray-500">Detox & renew.</div>
+              </figcaption>
+            </figure>
+
+            <figure data-category="class" class="gallery-item rounded-lg overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=60" alt="yoga class group" class="w-full h-56 object-cover group-hover:scale-105 transition" />
+              <figcaption class="p-4 bg-white">
+                <div class="font-semibold">Therapy Session</div>
+                <div class="text-sm text-gray-500">Personalised plans.</div>
+              </figcaption>
+            </figure>
+
+            <figure data-category="workshop" class="gallery-item rounded-lg overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=800&q=60" alt="meditation workshop" class="w-full h-56 object-cover group-hover:scale-105 transition" />
+              <figcaption class="p-4 bg-white">
+                <div class="font-semibold">Meditation</div>
+                <div class="text-sm text-gray-500">Mindfulness & meditation.</div>
+              </figcaption>
+            </figure>
+
+            <figure data-category="retreat" class="gallery-item rounded-lg overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=800&q=60" alt="sunrise retreat" class="w-full h-56 object-cover group-hover:scale-105 transition" />
+              <figcaption class="p-4 bg-white">
+                <div class="font-semibold">Sunrise Sessions</div>
+                <div class="text-sm text-gray-500">Early morning practice.</div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- lightbox placeholder (simple modal) -->
+          <div id="lightbox" aria-hidden="true" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60">
+            <div class="max-w-4xl w-full p-6">
+              <button id="lightboxClose" class="text-white mb-4 float-right">Close ✕</button>
+              <img id="lightboxImg" src="" alt="enlarged image" class="w-full rounded-lg shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">What Students Say</h2>
+            <p class="mt-3 text-gray-600">Stories from students who've found balance and transformation.</p>
+          </div>
+
+          <div class="mt-8 relative">
+            <div id="testimonialCarousel" class="overflow-hidden rounded-xl">
+              <div class="flex transition-transform duration-500" style="transform: translateX(0%)" aria-live="polite">
+                <!-- Item 1 -->
+                <div class="w-full flex-shrink-0 px-4">
+                  <div class="p-8 bg-lightbg rounded-xl">
+                    <p class="text-lg italic">"The instructors are compassionate and deeply knowledgeable. My mobility improved within weeks."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=60" alt="student headshot" class="w-12 h-12 rounded-full object-cover" />
+                      <div>
+                        <div class="font-semibold">Anita</div>
+                        <div class="text-sm text-gray-500">Therapy Program</div>
+                      </div>
+                      <div class="ml-auto text-yellow-500">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="w-full flex-shrink-0 px-4">
+                  <div class="p-8 bg-lightbg rounded-xl">
+                    <p class="text-lg italic">"Excellent pranayama course. The breathing practices gave me focus and better sleep."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1531123414780-f22d8d7f7b7e?auto=format&fit=crop&w=200&q=60" alt="student headshot" class="w-12 h-12 rounded-full object-cover" />
+                      <div>
+                        <div class="font-semibold">Riya</div>
+                        <div class="text-sm text-gray-500">Pranayama</div>
+                      </div>
+                      <div class="ml-auto text-yellow-500">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="w-full flex-shrink-0 px-4">
+                  <div class="p-8 bg-lightbg rounded-xl">
+                    <p class="text-lg italic">"I loved the weekend retreat. It felt rejuvenating and well-organised."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                      <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=200&q=60" alt="student headshot" class="w-12 h-12 rounded-full object-cover" />
+                      <div>
+                        <div class="font-semibold">Manish</div>
+                        <div class="text-sm text-gray-500">Retreat</div>
+                      </div>
+                      <div class="ml-auto text-yellow-500">★★★★★</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- controls -->
+            <div class="mt-6 flex items-center justify-center gap-3">
+              <button id="prevTestimonial" class="px-3 py-2 rounded-md bg-white border">Prev</button>
+              <button id="nextTestimonial" class="px-3 py-2 rounded-md bg-primary text-white">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="py-16 bg-lightbg">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">Pricing & Packages</h2>
+            <p class="mt-2 text-gray-600">Choose a plan that suits your practice style — pay monthly or yearly for savings.</p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Basic -->
+            <div class="p-6 bg-white border rounded-xl">
+              <div class="text-lg font-semibold">Basic</div>
+              <div class="mt-2 text-3xl font-heading font-bold">₹799 <span class="text-sm text-gray-500">/month</span></div>
+              <ul class="mt-4 space-y-2 text-gray-600">
+                <li>Access to recorded classes</li>
+                <li>Weekly live class</li>
+                <li>Community access</li>
+              </ul>
+              <a href="contact.html" class="mt-6 inline-block px-4 py-2 rounded-md bg-primary text-white">Sign Up</a>
+            </div>
+
+            <!-- Popular -->
+            <div class="p-6 bg-white border-2 border-primary rounded-xl shadow-lg transform scale-100">
+              <div class="text-lg font-semibold">Standard <span class="ml-2 text-sm text-primary">Most popular</span></div>
+              <div class="mt-2 text-3xl font-heading font-bold">₹1499 <span class="text-sm text-gray-500">/month</span></div>
+              <ul class="mt-4 space-y-2 text-gray-600">
+                <li>All Basic features</li>
+                <li>Unlimited live classes</li>
+                <li>2 Personalized sessions/month</li>
+              </ul>
+              <a href="contact.html" class="mt-6 inline-block px-4 py-2 rounded-md bg-accent text-white">Get Started</a>
+            </div>
+
+            <!-- Premium -->
+            <div class="p-6 bg-white border rounded-xl">
+              <div class="text-lg font-semibold">Premium</div>
+              <div class="mt-2 text-3xl font-heading font-bold">₹2999 <span class="text-sm text-gray-500">/month</span></div>
+              <ul class="mt-4 space-y-2 text-gray-600">
+                <li>All Standard features</li>
+                <li>Weekly 1:1 guidance</li>
+                <li>Retreat discounts</li>
+              </ul>
+              <a href="contact.html" class="mt-6 inline-block px-4 py-2 rounded-md bg-primary text-white">Purchase</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG / NEWS -->
+      <section id="blog" class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">From the Blog</h2>
+            <p class="mt-2 text-gray-600">Latest articles, tips and practices from our teachers.</p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Post 1 -->
+            <article class="border rounded-xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=60" alt="blog post" class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="font-semibold text-xl">5 Morning Practices to Start Your Day</h3>
+                <p class="text-sm text-gray-500 mt-2">Short rituals to ground your body and mind.</p>
+                <a href="#" class="mt-4 inline-block text-primary hover:underline">Read article →</a>
+              </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="border rounded-xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=60" alt="blog post" class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="font-semibold text-xl">Breathwork for Anxiety</h3>
+                <p class="text-sm text-gray-500 mt-2">Techniques to calm your nervous system.</p>
+                <a href="#" class="mt-4 inline-block text-primary hover:underline">Read article →</a>
+              </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="border rounded-xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=60" alt="blog post" class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="font-semibold text-xl">Yoga for Desk Workers</h3>
+                <p class="text-sm text-gray-500 mt-2">Stretches and practices to relieve stiffness.</p>
+                <a href="#" class="mt-4 inline-block text-primary hover:underline">Read article →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="py-16 bg-lightbg">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">Frequently Asked Questions</h2>
+            <p class="mt-2 text-gray-600">Common questions about our classes and policies.</p>
+          </div>
+
+          <div class="mt-8 max-w-4xl mx-auto space-y-3" id="faqList">
+            <details class="p-4 bg-white border rounded-lg">
+              <summary class="font-semibold cursor-pointer">Do you offer classes for beginners?</summary>
+              <div class="mt-2 text-gray-600">Yes — we offer beginner-friendly classes and 1:1 intake sessions to help you start safely.</div>
+            </details>
+
+            <details class="p-4 bg-white border rounded-lg">
+              <summary class="font-semibold cursor-pointer">Can I switch between online and in-person?</summary>
+              <div class="mt-2 text-gray-600">Yes. Many of our members combine both online and in-person classes depending on their schedule.</div>
+            </details>
+
+            <details class="p-4 bg-white border rounded-lg">
+              <summary class="font-semibold cursor-pointer">What payment methods do you accept?</summary>
+              <div class="mt-2 text-gray-600">We accept UPI, card payments and bank transfer for packages. Contact support for invoices.</div>
+            </details>
+
+            <details class="p-4 bg-white border rounded-lg">
+              <summary class="font-semibold cursor-pointer">Is there a refund policy?</summary>
+              <div class="mt-2 text-gray-600">Refunds are handled on a case-by-case basis for annual packages within 14 days of purchase.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-5">
+              <h2 class="text-4xl font-heading font-bold text-primary">Get In Touch</h2>
+              <p class="mt-4 text-gray-600">Questions? Book a trial class or ask about packages. We are located in Bengaluru.</p>
+
+              <div class="mt-6 space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="text-primary"></div>
+                  <div>
+                    <div class="font-medium">Address</div>
+                    <div class="text-gray-500">Bengaluru, Karnataka, India</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="text-primary"></div>
+                  <div>
+                    <div class="font-medium">Phone</div>
+                    <a href="tel:+919676659153" class="text-gray-500 hover:underline">+91 96766 59153</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="text-primary"></div>
+                  <div>
+                    <div class="font-medium">Email</div>
+                    <a href="mailto:info@redescreation.in" class="text-gray-500 hover:underline">info@redescreation.in</a>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <a href="#" class="text-primary">Facebook</a>
+                  <a href="#" class="text-primary">Instagram</a>
+                  <a href="#" class="text-primary">YouTube</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7">
+              <form id="contactForm" class="grid grid-cols-1 gap-4 bg-lightbg p-6 rounded-xl" aria-label="Contact form">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <label class="block">
+                    <span class="text-sm">Full name</span>
+                    <input required type="text" name="name" class="mt-1 block w-full border rounded-md px-3 py-2" placeholder="Your name" />
+                  </label>
+
+                  <label class="block">
+                    <span class="text-sm">Phone</span>
+                    <input required type="tel" name="phone" class="mt-1 block w-full border rounded-md px-3 py-2" placeholder="+91 9xxxxxxxx" />
+                  </label>
+                </div>
+
+                <label>
+                  <span class="text-sm">Email</span>
+                  <input required type="email" name="email" class="mt-1 block w-full border rounded-md px-3 py-2" placeholder="you@example.com" />
+                </label>
+
+                <label>
+                  <span class="text-sm">Message</span>
+                  <textarea required name="message" rows="4" class="mt-1 block w-full border rounded-md px-3 py-2" placeholder="Tell us how we can help"></textarea>
+                </label>
+
+                <div class="flex items-center gap-4">
+                  <button type="submit" class="px-4 py-2 rounded-md bg-primary text-white">Send Message</button>
+                  <div class="text-sm text-gray-500">We usually respond within 1 business day.</div>
+                </div>
+              </form>
+
+              <!-- Map -->
+              <div class="mt-6 border rounded-lg overflow-hidden">
+                <iframe title="Yoga Studio Bengaluru Map" class="w-full h-56" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.151873138553!2d77.59456241527172!3d12.971598890861385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670d3b6c4c9%3A0xf2b6d24a2a20f8b8!2sBengaluru!5e0!3m2!1sen!2sin!4v1695600000000!5m2!1sen!2sin"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-primary text-white">
+      <div class="mx-auto max-w-6x1 px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center gap-3">
+              <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32 6s-10 8-10 18c0 10 10 18 10 18s10-8 10-18c0-10-10-18-10-18z" stroke="#fff" stroke-width="2" fill="none"/>
+                <path d="M12 44c6-8 20-10 20-10s14 2 20 10c-12 6-28 6-40 0z" stroke="#fff" stroke-width="2" fill="none"/>
+              </svg>
+              <div>
+                <div class="font-bold text-lg">Yoku</div>
+                <div class="text-sm">Yoga Studio — Bengaluru</div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-sm max-w-xs">We bring mindful yoga and therapy to everyone. Contact us for private sessions and corporate programs.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Pages</h4>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a href="index.html" class="hover:underline">Home</a></li>
+              <li><a href="about.html" class="hover:underline">About Us</a></li>
+              <li><a href="classes.html" class="hover:underline">Classes</a></li>
+              <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+              <li><a href="#faq" class="hover:underline">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Contact</h4>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li>Phone: <a href="tel:+919676659153" class="hover:underline">+91 96766 59153</a></li>
+              <li>Email: <a href="mailto:info@redescreation.in" class="hover:underline">info@redescreation.in</a></li>
+              <li>Domain: <a href="https://www.redescreation.in" class="hover:underline">www.redescreation.in</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Follow</h4>
+            <div class="mt-3 flex gap-3">
+              <a href="#" aria-label="Facebook" class="p-2 bg-white/10 rounded-md"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram" class="p-2 bg-white/10 rounded-md"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube" class="p-2 bg-white/10 rounded-md"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="mt-6">
+              <h4 class="font-semibold">Subscribe</h4>
+              <form id="subscribe-form" class="mt-3 flex gap-2">
+                <input aria-label="Email for newsletter" type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded-md" />
+                <button type="submit" class="px-4 py-2 rounded-md bg-accent text-white">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 border-t border-white/20 pt-6 text-sm">
+          <div class="flex flex-col md:flex-row md:justify-between items-center">
+            <div>© <span id="year"></span> Yoga Studio Bengaluru. All rights reserved.</div>
+            <div class="mt-3 md:mt-0">
+              <a href="#" class="mr-4 hover:underline">Privacy Policy</a>
+              <a href="#" class="hover:underline">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Helper: select
+    const $ = (s, el=document) => el.querySelector(s);
+    const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.style.display = 'block';
+      mobileMenu.setAttribute('aria-hidden', 'false');
+    });
+    mobileClose.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // Lightbox for gallery
+    const galleryGrid = $('#galleryGrid');
+    const lightbox = $('#lightbox');
+    const lightboxImg = $('#lightboxImg');
+    const lightboxClose = $('#lightboxClose');
+
+    $$('.gallery-item img').forEach(img => {
+      img.addEventListener('click', (e) => {
+        lightboxImg.src = e.target.src;
+        lightbox.style.display = 'flex';
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+    lightboxClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImg.src = '';
+      }
+    });
+
+    // Gallery filters
+    const filterButtons = $$('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        filterButtons.forEach(b => b.classList.remove('bg-primary', 'text-white'));
+        btn.classList.add('bg-primary', 'text-white');
+
+        $$('.gallery-item').forEach(item => {
+          const cat = item.getAttribute('data-category');
+          if (filter === 'all' || filter === cat) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Testimonials carousel (simple)
+    (function initCarousel() {
+      const carousel = document.querySelector('#testimonialCarousel > div');
+      const slides = carousel.children;
+      let index = 0;
+      const total = slides.length;
+      document.getElementById('nextTestimonial').addEventListener('click', () => {
+        index = (index + 1) % total;
+        carousel.style.transform = 'translateX(-' + (index*100) + '%)';
+      });
+      document.getElementById('prevTestimonial').addEventListener('click', () => {
+        index = (index - 1 + total) % total;
+        carousel.style.transform = 'translateX(-' + (index*100) + '%)';
+      });
+      // auto rotate
+      setInterval(() => {
+        index = (index + 1) % total;
+        carousel.style.transform = 'translateX(-' + (index*100) + '%)';
+      }, 7000);
+    })();
+
+    // Contact form handling (demo only)
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks! Your message has been received. We will contact you shortly.');
+      contactForm.reset();
+    });
+
+    // Subscribe form demo
+    const subscribeForm = document.getElementById('subscribe-form');
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for subscribing!');
+      subscribeForm.reset();
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Small animation on load (fade-in)
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.animate-fade-in').forEach((el, i) => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(8px)';
+        setTimeout(() => {
+          el.style.transition = 'all 650ms ease-out';
+          el.style.opacity = 1;
+          el.style.transform = 'translateY(0)';
+        }, 200 + i*100);
+      });
+    });
+
+    // Accessibility: Close menu on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (mobileMenu && mobileMenu.style.display === 'block') {
+          mobileMenu.style.display = 'none';
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+        if (lightbox && lightbox.style.display === 'flex') {
+          lightbox.style.display = 'none';
+          lightbox.setAttribute('aria-hidden', 'true');
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>

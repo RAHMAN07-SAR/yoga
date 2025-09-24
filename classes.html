@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ================= META / SEO ================= -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Classes | Yoga Studio Bengaluru — Yoku-inspired</title>
+  <meta name="description" content="Explore Yoga Studio Bengaluru classes: Vinyasa, Hatha, Pranayama, Yoga Therapy and Workshops. Book online or attend in-person. +91 96766 59153" />
+  <meta name="keywords" content="yoga classes bengaluru, vinyasa, hatha, pranayama, yoga therapy, online yoga, yoga studio" />
+  <meta name="author" content="Yoga Studio - Redescreation" />
+  <meta property="og:title" content="Classes | Yoga Studio Bengaluru" />
+  <meta property="og:description" content="From beginner-friendly flows to therapeutic sessions — view class schedules, instructors and packages." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1554311888-8e3c1c0bc9a0?auto=format&fit=crop&w=1600&q=60" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.redescreation.in/classes" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <!-- ================= STYLES (Tailwind Play CDN) ================= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2f6a63",
+            accent: "#ef6b63",
+            lightbg: "#e8f3f2"
+          },
+          maxWidth: {
+            '6x1': '78rem'
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['Poppins', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Basic page styles -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap');
+    :root { --accent: #ef6b63; --primary: #2f6a63; }
+    .fade-up { opacity:0; transform:translateY(20px); transition: all .7s cubic-bezier(.2,.8,.2,1); }
+    .fade-up.in-view { opacity:1; transform:none; }
+    .focus-ring:focus { outline:3px solid rgba(47,106,99,0.18); outline-offset:2px; }
+    .hero-graphic { background-position: right center; background-size: cover; background-repeat: no-repeat; }
+    /* simple scrollbar styling to match preview look */
+    ::-webkit-scrollbar { width: 10px; height:10px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5d1; border-radius: 999px; }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-white">
+
+  <!-- SKIP LINK -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
+
+  <!-- ================= SITE WRAPPER ================= -->
+  <div class="min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <header class="w-full shadow-sm bg-white/90 sticky top-0 z-40">
+      <div class="mx-auto w-full max-w-6x1 px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- logo -->
+          <div class="flex items-center gap-3">
+            <a href="#" class="flex items-center gap-3" aria-label="Yoga Studio Home">
+              <!-- simple SVG logo -->
+              <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32 6s-10 8-10 18c0 10 10 18 10 18s10-8 10-18c0-10-10-18-10-18z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+                <path d="M12 44c6-8 20-10 20-10s14 2 20 10c-12 6-28 6-40 0z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+              </svg>
+              <span class="font-heading font-semibold text-xl text-primary">Yoku</span>
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <nav class="hidden md:flex md:items-center md:space-x-6" aria-label="Main navigation">
+            <a href="index.html" class="text-sm text-primary hover:text-accent font-medium">Home</a>
+            <a href="about.html" class="text-sm hover:text-primary">About Us</a>
+            <a href="classes.html" class="text-sm hover:text-primary">Classes</a>
+            <a href="instructors.html" class="text-sm hover:text-primary">Instructors</a>
+            <a href="blog.html" class="text-sm hover:text-primary">Blog</a>
+            <a href="contact.html" class="text-sm hover:text-primary">Contact</a>
+          </nav>
+
+          <!-- CTAs -->
+          <div class="flex items-center space-x-3">
+            <a href="classes.html" class="hidden md:inline-block px-5 py-3 bg-primary text-white rounded-full shadow hover:opacity-95 transition" aria-label="View Classes">View Classes</a>
+            <button id="accountBtn" class="hidden md:inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100" aria-label="Account">
+              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0zM6 21a6 6 0 0 1 12 0" /></svg>
+            </button>
+
+            <!-- Mobile hamburger -->
+            <button id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden p-2 rounded-md focus:ring-2 focus:ring-primary" aria-label="Open menu">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile slide-out menu -->
+      <div id="mobileMenu" class="md:hidden" aria-hidden="true">
+        <div class="bg-white border-t">
+          <div class="px-6 py-6">
+            <div class="flex items-center justify-between">
+              <a href="#" class="flex items-center gap-3">
+                <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M32 6s-10 8-10 18c0 10 10 18 10 18s10-8 10-18c0-10-10-18-10-18z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+                  <path d="M12 44c6-8 20-10 20-10s14 2 20 10c-12 6-28 6-40 0z" stroke="#2f6a63" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="font-heading font-semibold text-lg text-primary">Yoku</span>
+              </a>
+              <button id="mobileClose" aria-label="Close menu" class="p-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+
+            <div class="mt-6 space-y-4">
+              <a href="index.html" class="block text-lg font-medium">Home</a>
+              <a href="about.html" class="block text-lg">About Us</a>
+              <a href="classes.html" class="block text-lg">Classes</a>
+              <a href="instructors.html" class="block text-lg">Instructors</a>
+              <a href="blog.html" class="block text-lg">Blog</a>
+              <a href="contact.html" class="block text-lg">Contact</a>
+            </div>
+
+            <div class="mt-6 border-t pt-4 flex items-center gap-3">
+              <input aria-label="Search site" type="search" placeholder="Search..." class="flex-1 px-3 py-2 border rounded-md" />
+              <div class="flex gap-2">
+                <a href="#" class="p-2 rounded-md bg-slate-100"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2v6M6 22V6" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+                <a href="#" class="p-2 rounded-md bg-slate-100"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" stroke-width="1.5"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main id="main" class="flex-1">
+
+      <!-- ================= HERO (Reference-inspired large hero with teacher image & blob) ================= -->
+      <section aria-label="Classes hero" class="relative overflow-hidden hero-graphic" style="background-color: #e8f3f2;">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8 py-14 lg:py-20">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <!-- left: copy -->
+            <div class="lg:col-span-7">
+              <p class="text-lg text-primary font-medium fade-up">Explore</p>
+              <h1 class="mt-3 text-5xl lg:text-7xl font-heading font-extrabold text-gray-800 leading-tight fade-up">Yoga Classes for Every Level</h1>
+              <p class="mt-6 text-lg text-gray-600 max-w-2xl fade-up">Join our Bengaluru studio or practice from home — choose from vinyasa flows, restorative classes, pranayama, therapeutic one-to-one sessions, and specialized workshops.</p>
+
+              <div class="mt-8 flex gap-4 items-center fade-up">
+                <a href="#schedule" class="px-6 py-3 bg-accent text-white rounded-full shadow hover:opacity-95 transition">View Schedule</a>
+                <a href="#pricing" class="text-sm text-primary hover:underline">See Pricing</a>
+              </div>
+
+              <!-- search + quick filters -->
+              <div class="mt-8 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+                <label for="classSearch" class="sr-only">Search classes</label>
+                <input id="classSearch" type="search" placeholder="Search classes (e.g. Vinyasa, Pranayama)" class="w-full sm:w-auto flex-1 px-4 py-3 border rounded-lg focus:ring focus:ring-primary focus:ring-opacity-30" />
+                <div class="flex gap-2">
+                  <button data-filter="all" class="filter-btn px-4 py-3 rounded-full bg-primary text-white">All</button>
+                  <button data-filter="online" class="filter-btn px-4 py-3 rounded-full bg-white text-primary border">Online</button>
+                  <button data-filter="inperson" class="filter-btn px-4 py-3 rounded-full bg-white text-primary border">In-person</button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- right: image & coral blob -->
+            <div class="lg:col-span-5 hidden lg:block relative">
+              <div class="relative w-full h-96 rounded-xl overflow-visible">
+                <div aria-hidden="true" class="absolute -right-14 top-6 w-[520px] h-[520px] rounded-full bg-accent/95 transform -translate-y-6"></div>
+                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=60" alt="yoga pose" class="absolute right-8 top-10 w-[460px] drop-shadow-lg rounded-lg object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CLASS TYPES (cards with icons & short desc) ================= -->
+      <section id="classes" class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-4">
+              <h2 class="text-4xl font-heading font-bold text-primary">Our Class Types</h2>
+              <p class="mt-4 text-gray-600">Choose from a range of thoughtfully structured classes designed for all levels.</p>
+
+              <div class="mt-6">
+                <label class="block text-sm text-gray-500">Filter by level</label>
+                <div class="mt-3 flex gap-2">
+                  <button class="level-filter px-3 py-2 rounded-md border text-sm" data-level="all">All</button>
+                  <button class="level-filter px-3 py-2 rounded-md border text-sm" data-level="beginner">Beginner</button>
+                  <button class="level-filter px-3 py-2 rounded-md border text-sm" data-level="intermediate">Intermediate</button>
+                  <button class="level-filter px-3 py-2 rounded-md border text-sm" data-level="advanced">Advanced</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" id="classGrid">
+                <!-- card: Vinyasa -->
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="inperson" data-level="intermediate" data-title="Vinyasa Flow">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Vinyasa Flow</h3>
+                      <p class="text-sm text-gray-500 mt-1">Dynamic sequences to build strength and mobility.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: Intermediate</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">45 min</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹199 / class</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Vinyasa Flow">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card: Hatha -->
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="inperson" data-level="beginner" data-title="Hatha Yoga">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Hatha Yoga</h3>
+                      <p class="text-sm text-gray-500 mt-1">Foundational alignment & breath-led movement for all levels.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: Beginner</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">60 min</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹249 / class</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Hatha Yoga">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card: Pranayama -->
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="online" data-level="all" data-title="Pranayama">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Pranayama (Breathwork)</h3>
+                      <p class="text-sm text-gray-500 mt-1">Calming and focused breathing techniques for better wellbeing.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: All</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">30 min</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹149 / class</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Pranayama">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card: Yin -->
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="inperson" data-level="beginner" data-title="Yin Yoga">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Yin Yoga</h3>
+                      <p class="text-sm text-gray-500 mt-1">Slow, long-held poses to improve flexibility and relaxation.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: Beginner</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">60 min</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹199 / class</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Yin Yoga">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card: Therapy -->
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="inperson" data-level="advanced" data-title="Yoga Therapy">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Yoga Therapy</h3>
+                      <p class="text-sm text-gray-500 mt-1">Personalized sessions for rehabilitation and pain management.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: Advanced</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">45-60 min</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹799 / session</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Yoga Therapy">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- card: Workshop -->
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="workshop" data-level="all" data-title="Alignment Workshop">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Alignment Workshop</h3>
+                      <p class="text-sm text-gray-500 mt-1">Specialized weekend workshop focusing on safe alignment and technique.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: All</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">3 hours</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹999 (one-time)</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Alignment Workshop">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Additional cards to increase content & length - reference has many entries -->
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="online" data-level="beginner" data-title="Morning Flow">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Morning Flow</h3>
+                      <p class="text-sm text-gray-500 mt-1">Gentle sequences to wake up body & mind.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: Beginner</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">30 min</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹99 / class</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Morning Flow">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="class-card border rounded-xl p-6 hover:shadow-lg transition" data-type="inperson" data-level="intermediate" data-title="Power Yoga">
+                  <div class="flex items-start gap-4">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-2xl"><i class="fa-regular fa-face-kiss-wink-heart"></i></div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-xl">Power Yoga</h3>
+                      <p class="text-sm text-gray-500 mt-1">High-energy classes for strength & stamina.</p>
+                      <div class="mt-4 flex items-center gap-3">
+                        <span class="text-sm font-medium">Level: Advanced</span>
+                        <span class="text-sm text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">60 min</span>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm text-gray-500">₹299 / class</div>
+                      <button class="mt-4 btn-book px-4 py-2 bg-primary text-white rounded-md" data-class="Power Yoga">Book</button>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CLASS SCHEDULE (tabbed days + weekly schedule) ================= -->
+      <section id="schedule" class="py-16 bg-lightbg">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">Weekly Schedule</h2>
+            <p class="mt-3 text-gray-600">Find classes that fit your day — we offer both online and in-person sessions throughout the week.</p>
+          </div>
+
+          <!-- day tabs -->
+          <div class="mt-8">
+            <div id="dayTabs" class="flex flex-wrap gap-2 items-center justify-center">
+              <button class="day-tab px-4 py-2 rounded-md bg-primary text-white" data-day="monday">Mon</button>
+              <button class="day-tab px-4 py-2 rounded-md bg-white text-primary border" data-day="tuesday">Tue</button>
+              <button class="day-tab px-4 py-2 rounded-md bg-white text-primary border" data-day="wednesday">Wed</button>
+              <button class="day-tab px-4 py-2 rounded-md bg-white text-primary border" data-day="thursday">Thu</button>
+              <button class="day-tab px-4 py-2 rounded-md bg-white text-primary border" data-day="friday">Fri</button>
+              <button class="day-tab px-4 py-2 rounded-md bg-white text-primary border" data-day="saturday">Sat</button>
+              <button class="day-tab px-4 py-2 rounded-md bg-white text-primary border" data-day="sunday">Sun</button>
+            </div>
+
+            <div class="mt-6 bg-white rounded-xl p-6 shadow">
+              <!-- schedule list container -->
+              <div id="scheduleContent">
+                <!-- Monday schedule (default) -->
+                <div class="day-schedule" data-day-content="monday">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">6:00 AM — Morning Flow (Online)</div>
+                        <div class="text-sm text-gray-500">30 min • All levels • Ananya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹99</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Morning Flow - Mon 6:00AM">Book</button>
+                      </div>
+                    </div>
+
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">8:00 AM — Hatha (In-person)</div>
+                        <div class="text-sm text-gray-500">60 min • Beginner • Rahul</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹249</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Hatha - Mon 8:00AM">Book</button>
+                      </div>
+                    </div>
+
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">6:30 PM — Vinyasa (In-person)</div>
+                        <div class="text-sm text-gray-500">45 min • Intermediate • Rahul</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹199</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Vinyasa - Mon 6:30PM">Book</button>
+                      </div>
+                    </div>
+
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">8:00 PM — Pranayama (Online)</div>
+                        <div class="text-sm text-gray-500">30 min • All levels • Priya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹149</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Pranayama - Mon 8:00PM">Book</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tuesday schedule -->
+                <div class="day-schedule hidden" data-day-content="tuesday">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">7:00 AM — Morning Flow (In-person)</div>
+                        <div class="text-sm text-gray-500">30 min • Beginner • Ananya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹99</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Morning Flow - Tue 7:00AM">Book</button>
+                      </div>
+                    </div>
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">6:00 PM — Power Yoga (In-person)</div>
+                        <div class="text-sm text-gray-500">60 min • Advanced • Rahul</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹299</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Power Yoga - Tue 6:00PM">Book</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Wednesday schedule -->
+                <div class="day-schedule hidden" data-day-content="wednesday">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">6:00 AM — Vinyasa (Online)</div>
+                        <div class="text-sm text-gray-500">45 min • Intermediate • Rahul</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹199</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Vinyasa - Wed 6:00AM">Book</button>
+                      </div>
+                    </div>
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">8:00 PM — Yin Yoga (Online)</div>
+                        <div class="text-sm text-gray-500">60 min • Beginner • Priya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹199</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Yin - Wed 8:00PM">Book</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Thursday schedule -->
+                <div class="day-schedule hidden" data-day-content="thursday">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">7:30 AM — Hatha (Online)</div>
+                        <div class="text-sm text-gray-500">60 min • Beginner • Ananya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹249</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Hatha - Thu 7:30AM">Book</button>
+                      </div>
+                    </div>
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">6:30 PM — Yoga Therapy (In-person)</div>
+                        <div class="text-sm text-gray-500">45-60 min • Therapy • Rohit</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹799</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Therapy - Thu 6:30PM">Book</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Friday schedule -->
+                <div class="day-schedule hidden" data-day-content="friday">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">6:00 AM — Morning Flow (Online)</div>
+                        <div class="text-sm text-gray-500">30 min • All levels • Ananya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹99</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Morning Flow - Fri 6:00AM">Book</button>
+                      </div>
+                    </div>
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">7:30 PM — Meditation (Online)</div>
+                        <div class="text-sm text-gray-500">45 min • All levels • Priya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹149</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Meditation - Fri 7:30PM">Book</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Saturday schedule -->
+                <div class="day-schedule hidden" data-day-content="saturday">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">8:00 AM — Weekend Workshop (In-person)</div>
+                        <div class="text-sm text-gray-500">3 hours • All levels • Guest Teacher</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹999</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Weekend Workshop - Sat 8:00AM">Book</button>
+                      </div>
+                    </div>
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">5:00 PM — Yin & Restore (In-person)</div>
+                        <div class="text-sm text-gray-500">60 min • Beginner • Priya</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹199</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Yin - Sat 5:00PM">Book</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sunday schedule -->
+                <div class="day-schedule hidden" data-day-content="sunday">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-md flex items-center justify-between">
+                      <div>
+                        <div class="font-semibold">7:00 AM — Sunrise Flow (In-person)</div>
+                        <div class="text-sm text-gray-500">45 min • All levels • Rahul</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-sm font-medium">₹149</div>
+                        <button class="mt-2 px-3 py-1 rounded-md bg-primary text-white btn-book" data-class="Sunrise Flow - Sun 7:00AM">Book</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- scheduleContent -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= INSTRUCTORS HIGHLIGHT (short profiles & booking modal link) ================= -->
+      <section class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">Meet the Teachers</h2>
+            <p class="mt-3 text-gray-600">Our certified instructors bring experience, warmth and a strong dedication to safety and alignment.</p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" alt="Mira Patel" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Mira Patel</div>
+                <div class="text-sm text-gray-500">Hatha & Therapy</div>
+                <div class="mt-3">
+                  <button class="px-4 py-2 rounded-md bg-primary text-white btn-profile" data-instructor="Mira Patel">View Profile</button>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=800&q=60" alt="Arjun Rao" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Arjun Rao</div>
+                <div class="text-sm text-gray-500">Vinyasa & Breathwork</div>
+                <div class="mt-3">
+                  <button class="px-4 py-2 rounded-md bg-primary text-white btn-profile" data-instructor="Arjun Rao">View Profile</button>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=800&q=60" alt="Sima Roy" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Sima Roy</div>
+                <div class="text-sm text-gray-500">Pranayama Specialist</div>
+                <div class="mt-3">
+                  <button class="px-4 py-2 rounded-md bg-primary text-white btn-profile" data-instructor="Sima Roy">View Profile</button>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="bg-white border rounded-xl p-6 text-center">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=60" alt="Rohit Desai" class="w-36 h-36 rounded-full mx-auto object-cover shadow-sm" />
+              <figcaption class="mt-4">
+                <div class="font-semibold">Rohit Desai</div>
+                <div class="text-sm text-gray-500">Therapeutic Yoga</div>
+                <div class="mt-3">
+                  <button class="px-4 py-2 rounded-md bg-primary text-white btn-profile" data-instructor="Rohit Desai">View Profile</button>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TESTIMONIALS (carousel) ================= -->
+      <section class="py-16 bg-lightbg">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">Student Stories</h2>
+            <p class="mt-2 text-gray-600">Hear from our community — their progress, experiences and results.</p>
+          </div>
+
+          <div class="mt-8 relative">
+            <div class="overflow-hidden rounded-xl">
+              <div id="testimonialTrack" class="flex transition-transform duration-700">
+                <div class="min-w-full p-8">
+                  <blockquote class="text-lg italic">"The online pranayama classes helped me manage stress and sleep better. Excellent instructors!"</blockquote>
+                  <div class="mt-6 flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=60" alt="Anita headshot" class="w-12 h-12 rounded-full object-cover" />
+                    <div>
+                      <div class="font-semibold">Anita</div>
+                      <div class="text-sm text-gray-500">Pranayama student</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="min-w-full p-8">
+                  <blockquote class="text-lg italic">"I regained mobility after injury thanks to Yoga Therapy sessions with Rohit."</blockquote>
+                  <div class="mt-6 flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1531123414780-f22d8d7f7b7e?auto=format&fit=crop&w=200&q=60" alt="Riya headshot" class="w-12 h-12 rounded-full object-cover" />
+                    <div>
+                      <div class="font-semibold">Riya</div>
+                      <div class="text-sm text-gray-500">Therapy student</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="min-w-full p-8">
+                  <blockquote class="text-lg italic">"The weekend workshop was a transformative experience — highly detailed and well-paced."</blockquote>
+                  <div class="mt-6 flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=200&q=60" alt="Manish headshot" class="w-12 h-12 rounded-full object-cover" />
+                    <div>
+                      <div class="font-semibold">Manish</div>
+                      <div class="text-sm text-gray-500">Workshop attendee</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- controls -->
+            <div class="mt-6 flex items-center justify-center gap-3">
+              <button id="prevTestimonial" class="px-3 py-2 rounded-md bg-white border">Prev</button>
+              <button id="nextTestimonial" class="px-3 py-2 rounded-md bg-primary text-white">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PRICING HIGHLIGHT ================= -->
+      <section id="pricing" class="py-16 bg-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">Pricing at a Glance</h2>
+            <p class="mt-2 text-gray-600">Flexible membership options to suit occasional practitioners and committed yogis alike.</p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white border rounded-xl">
+              <div class="text-lg font-semibold">Drop-in</div>
+              <div class="mt-2 text-3xl font-heading font-bold">₹299 <span class="text-sm text-gray-500">/class</span></div>
+              <ul class="mt-4 space-y-2 text-gray-600">
+                <li>Single class access</li>
+                <li>Online & in-person</li>
+              </ul>
+              <a href="contact.html" class="mt-6 inline-block px-4 py-2 rounded-md bg-primary text-white">Book a Class</a>
+            </div>
+
+            <div class="p-6 bg-white border-2 border-primary rounded-xl shadow-lg transform scale-100">
+              <div class="text-lg font-semibold">Monthly</div>
+              <div class="mt-2 text-3xl font-heading font-bold">₹1499 <span class="text-sm text-gray-500">/month</span></div>
+              <ul class="mt-4 space-y-2 text-gray-600">
+                <li>Unlimited online classes</li>
+                <li>4 in-person classes</li>
+                <li>1 therapy session (discounted)</li>
+              </ul>
+              <a href="contact.html" class="mt-6 inline-block px-4 py-2 rounded-md bg-accent text-white">Get Started</a>
+            </div>
+
+            <div class="p-6 bg-white border rounded-xl">
+              <div class="text-lg font-semibold">Annual</div>
+              <div class="mt-2 text-3xl font-heading font-bold">₹14999 <span class="text-sm text-gray-500">/yr</span></div>
+              <ul class="mt-4 space-y-2 text-gray-600">
+                <li>All monthly features</li>
+                <li>Priority booking for workshops</li>
+                <li>Retreat discount</li>
+              </ul>
+              <a href="contact.html" class="mt-6 inline-block px-4 py-2 rounded-md bg-primary text-white">Purchase</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAQ (accordion) ================= -->
+      <section id="faq" class="py-16 bg-lightbg">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-heading font-bold text-primary">Frequently Asked Questions</h2>
+            <p class="mt-2 text-gray-600">Answers to common questions about classes, levels and bookings.</p>
+          </div>
+
+          <div class="mt-8 max-w-4xl mx-auto space-y-3">
+            <details class="p-4 bg-white border rounded-lg">
+              <summary class="font-semibold cursor-pointer">How do I book a class?</summary>
+              <div class="mt-2 text-gray-600">Click 'Book' on any class or schedule entry. You will be guided to enter your details. For assistance call +91 96766 59153.</div>
+            </details>
+
+            <details class="p-4 bg-white border rounded-lg">
+              <summary class="font-semibold cursor-pointer">What is your cancellation policy?</summary>
+              <div class="mt-2 text-gray-600">Cancel at least 6 hours before the class for a full refund. Workshop and therapy cancellations vary — see terms.</div>
+            </details>
+
+            <details class="p-4 bg-white border rounded-lg">
+              <summary class="font-semibold cursor-pointer">Do you offer private sessions?</summary>
+              <div class="mt-2 text-gray-600">Yes — Yoga Therapy and one-to-one private sessions are available. Contact us to schedule.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT STRIP & CTA ================= -->
+      <section id="contact" class="py-12 bg-primary text-white">
+        <div class="mx-auto max-w-6x1 px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 class="text-2xl font-semibold">Ready to try a class?</h3>
+            <p class="mt-1 text-sm">Contact us to book a free trial or join a class today.</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="tel:+919676659153" class="px-4 py-2 bg-white text-primary rounded-md">Call +91 96766 59153</a>
+            <a href="mailto:info@redescreation.in" class="px-4 py-2 bg-white/20 rounded-md border border-white">Email Us</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-primary text-white">
+      <div class="mx-auto max-w-6x1 px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center gap-3">
+              <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32 6s-10 8-10 18c0 10 10 18 10 18s10-8 10-18c0-10-10-18-10-18z" stroke="#fff" stroke-width="2" fill="none"/>
+                <path d="M12 44c6-8 20-10 20-10s14 2 20 10c-12 6-28 6-40 0z" stroke="#fff" stroke-width="2" fill="none"/>
+              </svg>
+              <div>
+                <div class="font-bold text-lg">Yoku</div>
+                <div class="text-sm">Yoga Studio — Bengaluru</div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-sm max-w-xs">We bring mindful yoga and therapy to everyone. Contact us for private sessions and corporate programs.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Pages</h4>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a href="index.html" class="hover:underline">Home</a></li>
+              <li><a href="about.html" class="hover:underline">About Us</a></li>
+              <li><a href="classes.html" class="hover:underline">Classes</a></li>
+              <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+              <li><a href="#faq" class="hover:underline">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Contact</h4>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li>Phone: <a href="tel:+919676659153" class="hover:underline">+91 96766 59153</a></li>
+              <li>Email: <a href="mailto:info@redescreation.in" class="hover:underline">info@redescreation.in</a></li>
+              <li>Domain: <a href="https://www.redescreation.in" class="hover:underline">www.redescreation.in</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Follow</h4>
+            <div class="mt-3 flex gap-3">
+              <a href="#" aria-label="Facebook" class="p-2 bg-white/10 rounded-md"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram" class="p-2 bg-white/10 rounded-md"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube" class="p-2 bg-white/10 rounded-md"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="mt-6">
+              <h4 class="font-semibold">Subscribe</h4>
+              <form id="subscribe-form" class="mt-3 flex gap-2">
+                <input aria-label="Email for newsletter" type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded-md" />
+                <button type="submit" class="px-4 py-2 rounded-md bg-accent text-white">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 border-t border-white/20 pt-6 text-sm">
+          <div class="flex flex-col md:flex-row md:justify-between items-center">
+            <div>© <span id="year"></span> Yoga Studio Bengaluru. All rights reserved.</div>
+            <div class="mt-3 md:mt-0">
+              <a href="#" class="mr-4 hover:underline">Privacy Policy</a>
+              <a href="#" class="hover:underline">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================= MODALS (Booking / Profile / Lightbox) ================= -->
+  <div id="modalBackdrop" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50" aria-hidden="true" role="dialog">
+    <div class="bg-white rounded-lg max-w-2xl w-full p-6">
+      <button id="modalClose" class="float-right text-gray-600">Close ✕</button>
+      <h3 id="modalTitle" class="text-2xl font-semibold mb-4">Book Class</h3>
+      <form id="bookingForm" class="grid grid-cols-1 gap-4">
+        <div>
+          <label class="block text-sm">Class</label>
+          <input id="bookingClass" type="text" readonly class="mt-1 block w-full border rounded-md px-3 py-2 bg-gray-50" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label>Full name <input required type="text" name="name" class="mt-1 block w-full border rounded-md px-3 py-2" /></label>
+          <label>Phone <input required type="tel" name="phone" class="mt-1 block w-full border rounded-md px-3 py-2" /></label>
+        </div>
+        <label>Email <input required type="email" name="email" class="mt-1 block w-full border rounded-md px-3 py-2" /></label>
+        <div class="flex items-center gap-3">
+          <button type="submit" class="px-4 py-2 bg-primary text-white rounded-md">Confirm Booking</button>
+          <button type="button" id="modalCancel" class="px-4 py-2 border rounded-md">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Helper: select
+    const $ = (s, el=document) => el.querySelector(s);
+    const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.style.display = 'block';
+      mobileMenu.setAttribute('aria-hidden', 'false');
+    });
+    mobileClose.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // Filter buttons (hero quick filters)
+    const filterBtns = $$('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const filter = btn.getAttribute('data-filter');
+        // active style
+        filterBtns.forEach(b => b.classList.remove('bg-primary','text-white'));
+        btn.classList.add('bg-primary','text-white');
+        // filter class cards
+        $$('.class-card').forEach(card => {
+          if(filter === 'all') {
+            card.style.display = '';
+          } else {
+            const type = card.getAttribute('data-type') || '';
+            card.style.display = (type === filter) ? '' : 'none';
+          }
+        });
+      });
+    });
+
+    // Level filters (sidebar)
+    const levelFilters = $$('.level-filter');
+    levelFilters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const level = btn.getAttribute('data-level');
+        levelFilters.forEach(b => b.classList.remove('bg-primary','text-white'));
+        btn.classList.add('bg-primary','text-white');
+        $$('.class-card').forEach(card => {
+          if(level === 'all') { card.style.display = ''; return; }
+          const cardLevel = (card.getAttribute('data-level') || '').toLowerCase();
+          card.style.display = (cardLevel === level) ? '' : 'none';
+        });
+      });
+    });
+
+    // Class search (simple)
+    const classSearch = $('#classSearch');
+    classSearch && classSearch.addEventListener('input', (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      $$('.class-card').forEach(card => {
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        card.style.display = title.includes(q) ? '' : 'none';
+      });
+    });
+
+    // Day tabs switcher
+    const dayTabs = $$('.day-tab');
+    const daySchedules = $$('.day-schedule');
+    dayTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        dayTabs.forEach(t => t.classList.remove('bg-primary','text-white'));
+        tab.classList.add('bg-primary','text-white');
+        const day = tab.getAttribute('data-day');
+        daySchedules.forEach(s => {
+          s.classList.toggle('hidden', s.getAttribute('data-day-content') !== day);
+        });
+      });
+    });
+
+    // Booking modal logic
+    const modalBackdrop = $('#modalBackdrop');
+    const modalClose = $('#modalClose');
+    const modalCancel = $('#modalCancel');
+    const bookingForm = $('#bookingForm');
+    const bookingClassInput = $('#bookingClass');
+
+    $$('.btn-book').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const cls = e.currentTarget.getAttribute('data-class') || e.currentTarget.dataset.class;
+        bookingClassInput.value = cls;
+        modalBackdrop.classList.remove('hidden');
+        modalBackdrop.setAttribute('aria-hidden','false');
+      });
+    });
+
+    $$('.btn-profile').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const instructor = btn.getAttribute('data-instructor');
+        bookingClassInput.value = `1:1 session with ${instructor}`;
+        modalBackdrop.classList.remove('hidden');
+        modalBackdrop.setAttribute('aria-hidden','false');
+      });
+    });
+
+    modalClose && modalClose.addEventListener('click', () => {
+      modalBackdrop.classList.add('hidden');
+      modalBackdrop.setAttribute('aria-hidden','true');
+    });
+    modalCancel && modalCancel.addEventListener('click', () => {
+      modalBackdrop.classList.add('hidden');
+      modalBackdrop.setAttribute('aria-hidden','true');
+    });
+
+    // Close on backdrop click
+    modalBackdrop && modalBackdrop.addEventListener('click', (e) => {
+      if(e.target === modalBackdrop) {
+        modalBackdrop.classList.add('hidden');
+        modalBackdrop.setAttribute('aria-hidden','true');
+      }
+    });
+
+    // Booking form demo submit
+    bookingForm && bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(bookingForm);
+      // demo response
+      alert(`Thanks ${formData.get('name')}! Your booking for "${formData.get('class') || bookingClassInput.value}" has been received. We'll contact you soon.`);
+      bookingForm.reset();
+      modalBackdrop.classList.add('hidden');
+      modalBackdrop.setAttribute('aria-hidden','true');
+    });
+
+    // Testimonials carousel simple controls
+    (function initTestimonials() {
+      const track = $('#testimonialTrack');
+      if(!track) return;
+      const slides = track.children.length;
+      let idx = 0;
+      $('#nextTestimonial').addEventListener('click', () => {
+        idx = (idx + 1) % slides;
+        track.style.transform = `translateX(-${idx * 100}%)`;
+      });
+      $('#prevTestimonial').addEventListener('click', () => {
+        idx = (idx - 1 + slides) % slides;
+        track.style.transform = `translateX(-${idx * 100}%)`;
+      });
+      setInterval(() => {
+        idx = (idx + 1) % slides;
+        track.style.transform = `translateX(-${idx * 100}%)`;
+      }, 7000);
+    })();
+
+    // Simple reveal on scroll (fade-up effect)
+    function revealOnScroll() {
+      const elems = document.querySelectorAll('.fade-up');
+      const windowHeight = window.innerHeight;
+      elems.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < windowHeight - 100) el.classList.add('in-view');
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    setTimeout(revealOnScroll, 500);
+
+    // Footer year
+    document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+
+    // Subscribe form demo
+    const subscribeForm = $('#subscribe-form');
+    subscribeForm && subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for subscribing!');
+      subscribeForm.reset();
+    });
+
+    // Accessibility: close modals / mobile on Escape
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') {
+        modalBackdrop.classList.add('hidden');
+        mobileMenu && mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Tiny enhancement: smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if(href.length > 1) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>
